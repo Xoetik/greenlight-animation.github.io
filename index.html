@@ -333,15 +333,16 @@
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
-    nav { padding: 16px 20px; }
-    .nav-links { display: none; }
-    section, #portfolio, #contact, #about { padding: 60px 20px; }
-    .portfolio-grid { grid-template-columns: 1fr; }
-    .services-list { grid-template-columns: 1fr; }
-    footer { flex-direction: column; text-align: center; }
-    .about-inner { grid-template-columns: 1fr; gap: 40px; }
-    .about-left { position: static; }
-  }
+  nav { padding: 16px 20px; }
+  .nav-links { display: none; }
+  section, #portfolio, #contact { padding: 60px 20px; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .portfolio-item:first-child { grid-column: span 1; aspect-ratio: 16/9; }
+  .services-list { grid-template-columns: 1fr; }
+  footer { flex-direction: column; text-align: center; }
+  #testimonials > div { grid-template-columns: 1fr !important; }
+}
+
 </style>
 </head>
 <body>
@@ -454,6 +455,40 @@
     </div>
   </div>
 </section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="border-top: 1px solid #222;">
+  <p class="section-label">Client Words</p>
+  <h2 class="section-title">What People Say</h2>
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: #222;">
+
+    <div style="background: var(--black); padding: 40px 32px; transition: background 0.2s;" onmouseover="this.style.background='var(--dark)'" onmouseout="this.style.background='var(--black)'">
+      <div style="font-size: 48px; font-family: 'Bebas Neue', sans-serif; color: var(--green); opacity: 0.4; line-height: 1; margin-bottom: 16px;">"</div>
+      <p style="font-size: 15px; color: var(--white); line-height: 1.8; margin-bottom: 24px;">We gave Alex a description of our podcast. He came back with the perfect logo with animations that fit the style and feel we were looking for. Very professional and quick.</p>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="width: 2px; height: 32px; background: var(--green);"></div>
+        <div>
+          <div style="font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.08em; color: var(--white);">Steve W.</div>
+          <div style="font-size: 12px; color: var(--gray-light); letter-spacing: 0.08em; text-transform: uppercase;">The Steve and Steve Show</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: var(--black); padding: 40px 32px; transition: background 0.2s;" onmouseover="this.style.background='var(--dark)'" onmouseout="this.style.background='var(--black)'">
+      <div style="font-size: 48px; font-family: 'Bebas Neue', sans-serif; color: var(--green); opacity: 0.4; line-height: 1; margin-bottom: 16px;">"</div>
+      <p style="font-size: 15px; color: var(--white); line-height: 1.8; margin-bottom: 24px;">Such amazing work! His work is precise and exactly what I was looking for!</p>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="width: 2px; height: 32px; background: var(--green);"></div>
+        <div>
+          <div style="font-family: 'Bebas Neue', sans-serif; font-size: 16px; letter-spacing: 0.08em; color: var(--white);">Alex C.</div>
+          <div style="font-size: 12px; color: var(--gray-light); letter-spacing: 0.08em; text-transform: uppercase;">School Teacher</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <!-- CONTACT -->
 <section id="contact">
