@@ -84,46 +84,7 @@
     width: min(700px, 80vw); height: min(200px, 20vw);
     background: radial-gradient(ellipse, rgba(0,200,83,0.10) 0%, transparent 70%);
     pointer-events: none;
-  }
-
-  /* LOGO STAGE */
-  .logo-stage {
-    width: 220px; height: 220px;
-    background: var(--dark);
-    border: 1px solid #2a2a2a;
-    border-radius: 24px;
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 48px;
-    position: relative; overflow: hidden;
-  }
-  .logo-stage::before, .logo-stage::after {
-    content: ''; position: absolute;
-    width: 20px; height: 20px;
-    border-color: var(--green); border-style: solid; opacity: 0.5;
-  }
-  .logo-stage::before { top: 12px; left: 12px; border-width: 2px 0 0 2px; border-radius: 3px 0 0 0; }
-  .logo-stage::after  { bottom: 12px; right: 12px; border-width: 0 2px 2px 0; border-radius: 0 0 3px 0; }
-  .stoplight-logo {
-    width: 64px; height: 148px;
-    background: var(--dark);
-    border-radius: 14px;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: space-around;
-    padding: 14px 0;
-    border: 2px solid #333;
-    position: relative;
-    animation: logo-appear 1.2s ease forwards;
-    opacity: 0;
-  }
-  .stoplight-logo::before, .stoplight-logo::after {
-    content: ''; position: absolute;
-    left: -4px; right: -4px; height: 7px;
-    background: #0e0e0e; border-radius: 3px;
-  }
-  .stoplight-logo::before { top: 28px; }
-  .stoplight-logo::after  { top: 72px; }
-  .light-lg { width: 36px; height: 36px; border-radius: 50%; background: #1e1e1e; border: 1px solid #333; }
-  .light-lg.green { animation: light-on 0.6s ease 1.4s forwards; }
+  } 
   .logo-lockup { display: flex; flex-direction: column; align-items: center; gap: 0; animation: fade-up 0.8s ease 0.8s forwards; opacity: 0; }
   .logo-line1 { font-family: 'Bebas Neue', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: var(--green); }
   .logo-line2 { font-family: 'Bebas Neue', sans-serif; font-size: 40px; letter-spacing: 0.08em; color: var(--white); line-height: 1; }
@@ -431,19 +392,18 @@
 
 <!-- HERO -->
 <section id="hero">
-  <div class="logo-stage">
-    <div style="display:flex;align-items:center;gap:18px;">
-      <div class="stoplight-logo">
-        <div class="light-lg"></div>
-        <div class="light-lg"></div>
-        <div class="light-lg green"></div>
-      </div>
-      <div class="logo-lockup">
-        <span class="logo-line2">Green<br>Light</span>
-        <span class="logo-line3">Studios</span>
-      </div>
-    </div>
-  </div>
+ <div class="logo-stage">
+  <video 
+    autoplay 
+    loop 
+    muted 
+    playsinline
+    width="220" 
+    height="220">
+    <source src="assets/gls-logo-anim.webm" type="video/webm">
+    <source src="assets/gls-logo-anim.mp4" type="video/mp4">
+  </video>
+</div>
   <h1 class="hero-tagline">Motion<br>That <span>Moves</span><br>People</h1>
   <p class="hero-sub">Logo animations, product reveals, and motion graphics that make brands impossible to ignore.</p>
   <a href="https://calendly.com/alexwalsh-greenlight-animation/newclientmeeting" target="_blank" class="cta-btn">Get a Quote<span class="cta-arrow"></span></a>
