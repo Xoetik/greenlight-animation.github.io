@@ -1,7 +1,7 @@
 # Green Light Studios
 
 **Motion graphics for small to medium businesses.**
-Fort Collins, Colorado — Remote worldwide.
+Northern Colorado — Remote worldwide.
 
 ---
 
