@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archive | Green Light Studios</title>
+  <meta name="description" content="The full body of work from Green Light Studios. Motion graphics, logo animations, and student projects." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --black:   #0a0a0a;
+      --dark:    #111111;
+      --card:    #161616;
+      --border:  #242424;
+      --green:   #4cff72;
+      --green-dim: #2bcc50;
+      --white:   #f0f0f0;
+      --muted:   #777;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body:    'DM Sans', sans-serif;
+      --radius: 4px;
+      --gap: clamp(1.5rem, 3vw, 2.5rem);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-logo span { color: var(--green); }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--green); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: clamp(4rem, 10vw, 8rem) 2rem clamp(2rem, 5vw, 4rem);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      line-height: 0.92;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      max-width: 900px;
+      margin: 0 auto 3rem;
+    }
+
+    /* ── SECTION ── */
+    .section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      letter-spacing: 0.04em;
+      color: var(--white);
+    }
+
+    .section-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--green);
+      border: 1px solid var(--green-dim);
+      padding: 0.2em 0.6em;
+      border-radius: 2px;
+    }
+
+    /* ── GRID ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--gap);
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .card:hover {
+      border-color: var(--green-dim);
+      transform: translateY(-3px);
+    }
+
+    .embed-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      background: #0d0d0d;
+    }
+
+    .embed-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Placeholder state */
+    .embed-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      background: #0d0d0d;
+      color: var(--muted);
+    }
+
+    .embed-placeholder svg {
+      opacity: 0.3;
+    }
+
+    .embed-placeholder span {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.4;
+    }
+
+    .card-body {
+      padding: 1.1rem 1.25rem 1.4rem;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      margin-bottom: 0.35rem;
+    }
+
+    .card-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: #888;
+      line-height: 1.55;
+    }
+
+    /* ── TAG PILLS ── */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.8rem;
+    }
+
+    .tag {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green-dim);
+      border: 1px solid #1e3d28;
+      background: #0d1f12;
+      padding: 0.15em 0.55em;
+      border-radius: 2px;
+    }
+
+    /* ── BACK LINK ── */
+    .back-bar {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 0;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--green); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--green); }
+
+    /* ── FADE IN ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      animation: fadeUp 0.4s ease both;
+    }
+
+    .grid .card:nth-child(1) { animation-delay: 0.05s; }
+    .grid .card:nth-child(2) { animation-delay: 0.12s; }
+    .grid .card:nth-child(3) { animation-delay: 0.19s; }
+    .grid .card:nth-child(4) { animation-delay: 0.26s; }
+    .grid .card:nth-child(5) { animation-delay: 0.33s; }
+    .grid .card:nth-child(6) { animation-delay: 0.40s; }
+
+    /* ── STUDIO REEL ── */
+    .reel-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+
+    .reel-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .reel-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      letter-spacing: 0.04em;
+      color: var(--white);
+    }
+
+    .reel-embed {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background: #0d0d0d;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.25s;
+    }
+
+    .reel-embed:hover {
+      border-color: var(--green-dim);
+    }
+
+    .reel-embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .reel-embed .embed-placeholder {
+      position: absolute;
+      inset: 0;
+    }
+
+    .reel-caption {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    @media (max-width: 600px) {
+      nav ul { display: none; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- NAV -->
+
+  <nav>
+    <a href="/" class="nav-logo">Green Light<span>.</span></a>
+    <ul>
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#portfolio">Work</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- BACK -->
+
+  <div class="back-bar">
+    <a href="/#portfolio" class="back-link">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to Main Portfolio
+    </a>
+  </div>
+
+  <!-- HERO -->
+
+  <header class="hero">
+    <p class="hero-label">Green Light Studios</p>
+    <h1>The Full<br/>Archive</h1>
+    <p>
+      Extended work, student projects, and explorations that don't live on the main reel.
+      The full range of what motion design looks like when you're still finding the edges.
+    </p>
+  </header>
+
+  <div class="divider"></div>
+
+  <!-- SECTION: CLIENT & PROFESSIONAL -->
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Professional Work</h2>
+      <span class="section-tag">Client</span>
+    </div>
+
+```
+<div class="grid">
+
+  <!-- CARD: Replace src with your YouTube/Vimeo embed URL -->
+  <div class="card">
+    <div class="embed-wrap">
+      <!-- PLACEHOLDER: Replace with <iframe src="YOUR_EMBED_URL" allowfullscreen></iframe> -->
+      <div class="embed-placeholder">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
+          <polygon points="16,13 30,20 16,27" fill="white"/>
+        </svg>
+        <span>Add embed URL</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-meta">2024 &middot; Logo Animation</p>
+      <h3 class="card-title">Project Title Here</h3>
+      <p class="card-desc">Brief description of the project, client, and what the animation was built to do.</p>
+      <div class="tags">
+        <span class="tag">After Effects</span>
+        <span class="tag">Logo Sting</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="embed-wrap">
+      <div class="embed-placeholder">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
+          <polygon points="16,13 30,20 16,27" fill="white"/>
+        </svg>
+        <span>Add embed URL</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-meta">2024 &middot; Brand Animation</p>
+      <h3 class="card-title">Project Title Here</h3>
+      <p class="card-desc">Brief description of the project, client, and what the animation was built to do.</p>
+      <div class="tags">
+        <span class="tag">After Effects</span>
+        <span class="tag">Brand Kit</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- SECTION: STUDENT / ACADEMIC -->
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Academic Work</h2>
+      <span class="section-tag">School of Motion + UCDenver</span>
+    </div>
+
+```
+<div class="grid">
+
+  <div class="card">
+    <div class="embed-wrap">
+      <div class="embed-placeholder">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
+          <polygon points="16,13 30,20 16,27" fill="white"/>
+        </svg>
+        <span>Add embed URL</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-meta">2023 &middot; Motion Design</p>
+      <h3 class="card-title">Project Title Here</h3>
+      <p class="card-desc">What the brief was, what you were learning, and what you pushed yourself to figure out.</p>
+      <div class="tags">
+        <span class="tag">After Effects</span>
+        <span class="tag">Typography</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="embed-wrap">
+      <div class="embed-placeholder">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
+          <polygon points="16,13 30,20 16,27" fill="white"/>
+        </svg>
+        <span>Add embed URL</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-meta">2023 &middot; 3D Animation</p>
+      <h3 class="card-title">Project Title Here</h3>
+      <p class="card-desc">What the brief was, what you were learning, and what you pushed yourself to figure out.</p>
+      <div class="tags">
+        <span class="tag">3D</span>
+        <span class="tag">Character</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="embed-wrap">
+      <div class="embed-placeholder">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
+          <polygon points="16,13 30,20 16,27" fill="white"/>
+        </svg>
+        <span>Add embed URL</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-meta">2022 &middot; Brand Identity</p>
+      <h3 class="card-title">Project Title Here</h3>
+      <p class="card-desc">What the brief was, what you were learning, and what you pushed yourself to figure out.</p>
+      <div class="tags">
+        <span class="tag">After Effects</span>
+        <span class="tag">Illustrator</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- SECTION: PERSONAL / EXPERIMENTS -->
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Experiments</h2>
+      <span class="section-tag">Personal</span>
+    </div>
+
+```
+<div class="grid">
+
+  <div class="card">
+    <div class="embed-wrap">
+      <div class="embed-placeholder">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
+          <polygon points="16,13 30,20 16,27" fill="white"/>
+        </svg>
+        <span>Add embed URL</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-meta">2024 &middot; Personal Project</p>
+      <h3 class="card-title">Project Title Here</h3>
+      <p class="card-desc">What you were exploring and why you made it. No client. Just craft.</p>
+      <div class="tags">
+        <span class="tag">After Effects</span>
+        <span class="tag">Exploration</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <p>Green Light Studios &mdash; <a href="mailto:alexwalsh@greenlight-animation.com">alexwalsh@greenlight-animation.com</a></p>
+    <p style="margin-top:0.5rem;">
+      <a href="/">Home</a> &nbsp;&middot;&nbsp;
+      <a href="/#services">Services</a> &nbsp;&middot;&nbsp;
+      <a href="https://calendly.com/alexwalsh-greenlight-animation/newclientmeeting">Start a Project</a>
+    </p>
+  </footer>
+
+</body>
+</html>
