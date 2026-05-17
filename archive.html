@@ -1,454 +1,339 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Archive | Green Light Studios</title>
-  <meta name="description" content="The full body of work from Green Light Studios. Motion graphics, logo animations, and student projects." />
-  <meta name="robots" content="index, follow" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-
-  <style>
-    /* ── TOKENS ── */
-    :root {
-      --black:   #0a0a0a;
-      --dark:    #111111;
-      --card:    #161616;
-      --border:  #242424;
-      --green:   #4cff72;
-      --green-dim: #2bcc50;
-      --white:   #f0f0f0;
-      --muted:   #777;
-      --font-display: 'Bebas Neue', sans-serif;
-      --font-body:    'DM Sans', sans-serif;
-      --radius: 4px;
-      --gap: clamp(1.5rem, 3vw, 2.5rem);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--black);
-      color: var(--white);
-      font-family: var(--font-body);
-      font-weight: 300;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(10,10,10,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .nav-logo {
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      letter-spacing: 0.08em;
-      color: var(--white);
-      text-decoration: none;
-    }
-
-    .nav-logo span { color: var(--green); }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.85rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-
-    nav a:hover { color: var(--green); }
-
-    /* ── HERO ── */
-    .hero {
-      padding: clamp(4rem, 10vw, 8rem) 2rem clamp(2rem, 5vw, 4rem);
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .hero-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--green);
-      margin-bottom: 1rem;
-    }
-
-    .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(3.5rem, 9vw, 7rem);
-      line-height: 0.92;
-      letter-spacing: 0.02em;
-      color: var(--white);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero p {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 560px;
-      line-height: 1.7;
-    }
-
-    /* ── DIVIDER ── */
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: var(--border);
-      max-width: 900px;
-      margin: 0 auto 3rem;
-    }
-
-    /* PORTFOLIO */
-  #portfolio {
-    max-width: 1200px;
-    padding: 100px 48px;
-    margin: 0 auto;
-    border-top: 1px solid #222;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The full body of work from Green Light Studios. Motion graphics, logo animations, and student projects.">
+<meta property="og:title" content="Archive | Green Light Studios">
+<meta property="og:description" content="Extended work, student projects, and explorations from Green Light Studios.">
+<meta property="og:url" content="https://greenlight-animation.com/archive">
+<meta name="robots" content="index, follow">
+<title>Archive | Green Light Studios — Motion Graphics</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="canonical" href="https://greenlight-animation.com/archive">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #121212;
+    --dark: #1a1a1a;
+    --green: #00C853;
+    --green-dim: #00a844;
+    --white: #F8F8F8;
+    --gray: #444;
+    --gray-light: #888;
+    --card: #161616;
+    --border: #222;
+    --radius: 4px;
   }
 
-  /* YouTube embed — fixed: wrapper needs position:relative + explicit height */
-  .video-wrapper {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+    background: linear-gradient(to bottom, rgba(18,18,18,0.95), transparent);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-wordmark { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.12em; color: var(--white); }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { color: var(--gray-light); text-decoration: none; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--green); }
+
+  /* HERO */
+  #hero {
+    padding: 160px 48px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray-light);
+    text-decoration: none;
+    margin-bottom: 48px;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--green); }
+  .back-link svg { transition: transform 0.2s; }
+  .back-link:hover svg { transform: translateX(-3px); }
+
+  .hero-label { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 9vw, 100px);
+    letter-spacing: 0.04em;
+    line-height: 0.92;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    color: var(--gray-light);
+    max-width: 520px;
+    line-height: 1.75;
+  }
+
+  /* SHARED SECTION */
+  .archive-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-label { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(36px, 5vw, 56px);
+    letter-spacing: 0.04em;
+    color: var(--white);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+  .section-tag {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--green);
+    border: 1px solid var(--green-dim);
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+  }
+
+  /* REEL */
+  #reel {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .reel-embed {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
+    aspect-ratio: 16/9;
+    background: var(--dark);
+    border-radius: var(--radius);
     overflow: hidden;
-    border-radius: 4px;
-    border: 1px solid #222;
-    margin-bottom: 2px;
+    margin-top: 32px;
   }
-  .video-wrapper iframe {
+  .reel-embed iframe {
     position: absolute;
-    top: 0; left: 0;
+    inset: 0;
     width: 100%; height: 100%;
     border: none;
   }
 
-  .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 8px; }
-  .portfolio-item { position: relative; aspect-ratio: 9/16; background: var(--dark); overflow: hidden; cursor: pointer; }
-  .portfolio-thumb { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: var(--dark); border: 1px solid #222; transition: border-color 0.3s; }
-  .portfolio-item:hover .portfolio-thumb { border-color: var(--green); }
-  .thumb-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; opacity: 0.25; transition: opacity 0.3s; padding: 20px; text-align: center; }
-  .portfolio-item:hover .thumb-inner { opacity: 0.6; }
-  .thumb-icon { width: 48px; height: 48px; border: 2px solid var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-  .thumb-label { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.1em; color: var(--white); }
-  .thumb-type { font-size: 11px; letter-spacing: 0.15em; color: var(--gray-light); text-transform: uppercase; }
-  .portfolio-overlay { position: absolute; inset: 0; background: rgba(0,200,83,0.06); opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 20px; }
-  .portfolio-item:hover .portfolio-overlay { opacity: 1; }
-  .overlay-tag { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green); border: 1px solid var(--green); padding: 4px 10px; border-radius: 2px; }
+  /* CARD GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    margin-top: 40px;
+  }
 
+  .card {
+    background: var(--black);
+    overflow: hidden;
+    transition: background 0.2s;
+    animation: fadeUp 0.4s ease both;
+  }
+  .card:hover { background: var(--dark); }
 
-    /* ── SECTION ── */
-    .section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 2rem 5rem;
-    }
+  .grid .card:nth-child(1) { animation-delay: 0.05s; }
+  .grid .card:nth-child(2) { animation-delay: 0.12s; }
+  .grid .card:nth-child(3) { animation-delay: 0.19s; }
+  .grid .card:nth-child(4) { animation-delay: 0.26s; }
+  .grid .card:nth-child(5) { animation-delay: 0.33s; }
+  .grid .card:nth-child(6) { animation-delay: 0.40s; }
 
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
+  .embed-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #0d0d0d;
+  }
+  .embed-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
 
-    .section-header h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      letter-spacing: 0.04em;
-      color: var(--white);
-    }
+  /* Placeholder */
+  .embed-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #0d0d0d;
+    color: var(--gray-light);
+    border-bottom: 1px solid var(--border);
+  }
+  .embed-placeholder svg { opacity: 0.25; }
+  .embed-placeholder span {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.35;
+  }
 
-    .section-tag {
-      font-size: 0.72rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--green);
-      border: 1px solid var(--green-dim);
-      padding: 0.2em 0.6em;
-      border-radius: 2px;
-    }
+  .card-body { padding: 24px 28px 28px; }
 
-    /* ── GRID ── */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: var(--gap);
-    }
+  .card-meta {
+    font-size: 11px;
+    color: var(--gray-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
 
-    /* ── CARD ── */
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: border-color 0.25s, transform 0.25s;
-    }
+  .card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1;
+  }
 
-    .card:hover {
-      border-color: var(--green-dim);
-      transform: translateY(-3px);
-    }
+  .card-desc {
+    font-size: 14px;
+    color: var(--gray-light);
+    line-height: 1.7;
+  }
 
-    .embed-wrap {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%; /* 16:9 */
-      background: #0d0d0d;
-    }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 16px;
+  }
 
-    .embed-wrap iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+  .tag {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green-dim);
+    border: 1px solid #1a3d25;
+    background: #0d1f12;
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
 
-    /* Placeholder state */
-    .embed-placeholder {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      background: #0d0d0d;
-      color: var(--muted);
-    }
+  /* FOOTER */
+  footer {
+    border-top: 1px solid #1e1e1e;
+    padding: 28px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer-copy { font-size: 12px; color: var(--gray); letter-spacing: 0.05em; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { font-size: 12px; color: var(--gray-light); text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--green); }
 
-    .embed-placeholder svg {
-      opacity: 0.3;
-    }
+  .social-links { display: flex; align-items: center; gap: 12px; }
+  .social-link {
+    display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px;
+    border: 1px solid #2e2e2e;
+    border-radius: 6px;
+    color: var(--gray-light);
+    text-decoration: none;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+  .social-link:hover { color: var(--green); border-color: var(--green); background: rgba(0,200,83,0.06); }
+  .social-link svg { width: 16px; height: 16px; fill: currentColor; display: block; }
 
-    .embed-placeholder span {
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      opacity: 0.4;
-    }
+  .footer-green { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); animation: pulse 2s infinite; flex-shrink: 0; }
 
-    .card-body {
-      padding: 1.1rem 1.25rem 1.4rem;
-    }
+  /* KEYFRAMES */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-    .card-title {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      letter-spacing: 0.05em;
-      color: var(--white);
-      margin-bottom: 0.35rem;
-    }
-
-    .card-meta {
-      font-size: 0.78rem;
-      color: var(--muted);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 0.6rem;
-    }
-
-    .card-desc {
-      font-size: 0.9rem;
-      color: #888;
-      line-height: 1.55;
-    }
-
-    /* ── TAG PILLS ── */
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.8rem;
-    }
-
-    .tag {
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--green-dim);
-      border: 1px solid #1e3d28;
-      background: #0d1f12;
-      padding: 0.15em 0.55em;
-      border-radius: 2px;
-    }
-
-    /* ── BACK LINK ── */
-    .back-bar {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem 0;
-    }
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.82rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .back-link:hover { color: var(--green); }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      margin-top: 4rem;
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--green); }
-
-    /* ── FADE IN ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .card {
-      animation: fadeUp 0.4s ease both;
-    }
-
-    .grid .card:nth-child(1) { animation-delay: 0.05s; }
-    .grid .card:nth-child(2) { animation-delay: 0.12s; }
-    .grid .card:nth-child(3) { animation-delay: 0.19s; }
-    .grid .card:nth-child(4) { animation-delay: 0.26s; }
-    .grid .card:nth-child(5) { animation-delay: 0.33s; }
-    .grid .card:nth-child(6) { animation-delay: 0.40s; }
-
-    /* ── STUDIO REEL ── */
-    .reel-section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 2rem 4rem;
-    }
-
-    .reel-header {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .reel-header h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      letter-spacing: 0.04em;
-      color: var(--white);
-    }
-
-    .reel-embed {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      background: #0d0d0d;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: border-color 0.25s;
-    }
-
-    .reel-embed:hover {
-      border-color: var(--green-dim);
-    }
-
-    .reel-embed iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .reel-embed .embed-placeholder {
-      position: absolute;
-      inset: 0;
-    }
-
-    .reel-caption {
-      margin-top: 1rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-    }
-
-    @media (max-width: 600px) {
-      nav ul { display: none; }
-      .grid { grid-template-columns: 1fr; }
-    }
-  </style>
-
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    #hero, .archive-section, #reel { padding: 80px 20px 60px; }
+    #hero { padding-top: 120px; }
+    .grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; text-align: center; }
+  }
+</style>
 </head>
 <body>
 
-  <!-- NAV -->
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <img src="assets/nav-logo.png" alt="Green Light Studios" height="50" style="display:block;">
+    <span class="nav-wordmark">Green Light Studios</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#portfolio">Work</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <nav>
-    <a href="/" class="nav-logo">Green Light<span>.</span></a>
-    <ul>
-      <li><a href="/#about">About</a></li>
-      <li><a href="/#portfolio">Work</a></li>
-      <li><a href="/#services">Services</a></li>
-      <li><a href="/#contact">Contact</a></li>
-    </ul>
-  </nav>
+<!-- HERO -->
+<div id="hero">
+  <a href="/#portfolio" class="back-link">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Back to Main Portfolio
+  </a>
+  <p class="hero-label">Green Light Studios</p>
+  <h1 class="hero-title">The Full<br>Archive</h1>
+  <p class="hero-sub">Extended work, student projects, and explorations that don't live on the main reel. The full range of what motion design looks like when you're still finding the edges.</p>
+</div>
 
-  <!-- BACK -->
-
-  <div class="back-bar">
-    <a href="/#portfolio" class="back-link">
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-        <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      Back to Main Portfolio
-    </a>
-  </div>
-
-<section id="portfolio">
+<!-- REEL -->
+<section id="reel">
   <p class="section-label">Featured Work</p>
   <h2 class="section-title">The Reel</h2>
-  <p style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap;">
-  Logo animations and brand motion for small to medium businesses across Northern Colorado. Built in After Effects, designed to work on social, web, and screens of every size.
-  </p>
-  <div style="position:relative; aspect-ratio:16/9; width:100%; background: var(--dark);">
+  <div class="reel-embed">
     <iframe
       src="https://www.youtube.com/embed/zjaFv7AWf7s?si=6_6WXvuSgQ2t_JlN"
       title="Green Light Studios — Motion Graphics Demo Reel | Logo Animation for small to medium businesses"
-      frameborder="0"
-      style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen>
@@ -456,212 +341,186 @@
   </div>
 </section>
 
-  <!-- HERO -->
+<!-- PROFESSIONAL WORK -->
+<section class="archive-section">
+  <p class="section-label">Client</p>
+  <h2 class="section-title">Professional Work <span class="section-tag">Client</span></h2>
 
-  <header class="hero">
-    <p class="hero-label">Green Light Studios</p>
-    <h1>The Full<br/>Archive</h1>
-    <p>
-      Extended work, student projects, and explorations that don't live on the main reel.
-      The full range of what motion design looks like when you're still finding the edges.
-    </p>
-  </header>
+  <div class="grid">
 
-  <div class="divider"></div>
-
-  <!-- SECTION: CLIENT & PROFESSIONAL -->
-
-  <section class="section">
-    <div class="section-header">
-      <h2>Professional Work</h2>
-      <span class="section-tag">Client</span>
-    </div>
-
-
-<div class="grid">
-
-  <!-- CARD: Replace src with your YouTube/Vimeo embed URL -->
-  <div class="card">
-    <div class="embed-wrap">
-      <!-- PLACEHOLDER: Replace with <iframe src="YOUR_EMBED_URL" allowfullscreen></iframe> -->
-      <div class="embed-placeholder">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-          <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
-          <polygon points="16,13 30,20 16,27" fill="white"/>
-        </svg>
-        <span>Add embed URL</span>
+    <div class="card">
+      <div class="embed-wrap">
+        <div class="embed-placeholder">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
+            <polygon points="16,13 30,20 16,27" fill="white"/>
+          </svg>
+          <span>Add embed URL</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-meta">2024 &middot; Logo Animation</p>
+        <h3 class="card-title">Project Title Here</h3>
+        <p class="card-desc">Brief description of the project, client, and what the animation was built to do.</p>
+        <div class="tags">
+          <span class="tag">After Effects</span>
+          <span class="tag">Logo Sting</span>
+        </div>
       </div>
     </div>
-    <div class="card-body">
-      <p class="card-meta">2024 &middot; Logo Animation</p>
-      <h3 class="card-title">Project Title Here</h3>
-      <p class="card-desc">Brief description of the project, client, and what the animation was built to do.</p>
-      <div class="tags">
-        <span class="tag">After Effects</span>
-        <span class="tag">Logo Sting</span>
+
+    <div class="card">
+      <div class="embed-wrap">
+        <div class="embed-placeholder">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
+            <polygon points="16,13 30,20 16,27" fill="white"/>
+          </svg>
+          <span>Add embed URL</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-meta">2024 &middot; Brand Animation</p>
+        <h3 class="card-title">Project Title Here</h3>
+        <p class="card-desc">Brief description of the project, client, and what the animation was built to do.</p>
+        <div class="tags">
+          <span class="tag">After Effects</span>
+          <span class="tag">Brand Kit</span>
+        </div>
       </div>
     </div>
+
+  </div>
+</section>
+
+<!-- ACADEMIC WORK -->
+<section class="archive-section">
+  <p class="section-label">School of Motion + UC: Denver</p>
+  <h2 class="section-title">Academic Work <span class="section-tag">School</span></h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="embed-wrap">
+        <iframe title="vimeo-player" src="https://player.vimeo.com/video/272654043?h=0a8a1d9229" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="card-body">
+        <p class="card-meta">2018 &middot; Student Film</p>
+        <h3 class="card-title">Bamboo</h3>
+        <p class="card-desc">Student production for a fantasy short film following a forest guardian navigating loss, magic, and sacrifice. Served as Production Coordinator while developing compositing and rendering skills across the full pipeline.</p>
+        <div class="tags">
+          <span class="tag">Compositing</span>
+          <span class="tag">Rendering</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="embed-wrap">
+        <div class="embed-placeholder">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
+            <polygon points="16,13 30,20 16,27" fill="white"/>
+          </svg>
+          <span>Add embed URL</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-meta">2023 &middot; 3D Animation</p>
+        <h3 class="card-title">Project Title Here</h3>
+        <p class="card-desc">What the brief was, what you were learning, and what you pushed yourself to figure out.</p>
+        <div class="tags">
+          <span class="tag">3D</span>
+          <span class="tag">Character</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="embed-wrap">
+        <div class="embed-placeholder">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
+            <polygon points="16,13 30,20 16,27" fill="white"/>
+          </svg>
+          <span>Add embed URL</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="card-meta">2022 &middot; Brand Identity</p>
+        <h3 class="card-title">Project Title Here</h3>
+        <p class="card-desc">What the brief was, what you were learning, and what you pushed yourself to figure out.</p>
+        <div class="tags">
+          <span class="tag">After Effects</span>
+          <span class="tag">Illustrator</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIMENTS -->
+<section class="archive-section">
+  <p class="section-label">Personal</p>
+  <h2 class="section-title">Experiments <span class="section-tag">Personal</span></h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="embed-wrap">
+        <iframe title="vimeo-player" src="https://player.vimeo.com/video/300673583?h=afe2ecb8d6" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="card-body">
+        <p class="card-meta">2018 &middot; Personal Project</p>
+        <h3 class="card-title">Waves of Hexagons</h3>
+        <p class="card-desc">Exploring Maya's motion design features.</p>
+        <div class="tags">
+          <span class="tag">Maya</span>
+          <span class="tag">Exploration</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="embed-wrap">
+        <iframe title="vimeo-player" src="https://player.vimeo.com/video/304069404?h=84b77045c0" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="card-body">
+        <p class="card-meta">2018 &middot; Personal Project</p>
+        <h3 class="card-title">Dancing Bubbles</h3>
+        <p class="card-desc">Exploring Maya's motion design features.</p>
+        <div class="tags">
+          <span class="tag">Maya</span>
+          <span class="tag">Exploration</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-copy">Green Light Studios &mdash; Based in the United States of America</span>
+
+  <div class="social-links">
+    <a href="https://www.youtube.com/@GreenLightStudiosPro" class="social-link" aria-label="YouTube">
+      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </a>
+    <a href="https://x.com/Green_LightPro" class="social-link" aria-label="Twitter / X">
+      <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/green_lightstudios/" class="social-link" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/wanderwalsh/" class="social-link" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
   </div>
 
-  <div class="card">
-    <div class="embed-wrap">
-      <div class="embed-placeholder">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-          <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
-          <polygon points="16,13 30,20 16,27" fill="white"/>
-        </svg>
-        <span>Add embed URL</span>
-      </div>
-    </div>
-    <div class="card-body">
-      <p class="card-meta">2024 &middot; Brand Animation</p>
-      <h3 class="card-title">Project Title Here</h3>
-      <p class="card-desc">Brief description of the project, client, and what the animation was built to do.</p>
-      <div class="tags">
-        <span class="tag">After Effects</span>
-        <span class="tag">Brand Kit</span>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-  </section>
-
-  <!-- SECTION: STUDENT / ACADEMIC -->
-
-  <section class="section">
-    <div class="section-header">
-      <h2>Academic Work</h2>
-      <span class="section-tag">School of Motion + UC: Denver</span>
-    </div>
-
-
-<div class="grid">
-
-  <div class="card">
-    <div class="embed-wrap">
-      <iframe title="vimeo-player" src="https://player.vimeo.com/video/272654043?h=0a8a1d9229" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen></iframe>
-    </div>
-    <div class="card-body">
-      <p class="card-meta">2018 &middot; Student Film</p>
-      <h3 class="card-title">Bamboo</h3>
-      <p class="card-desc">Student production for a fantasy short film following a forest guardian navigating loss, magic, and sacrifice. Served as Production Coordinator while developing compositing and rendering skills across the full pipeline.</p>
-      <div class="tags">
-        <span class="tag">Compositing</span>
-        <span class="tag">Rendering</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="embed-wrap">
-      <div class="embed-placeholder">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-          <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
-          <polygon points="16,13 30,20 16,27" fill="white"/>
-        </svg>
-        <span>Add embed URL</span>
-      </div>
-    </div>
-    <div class="card-body">
-      <p class="card-meta">2023 &middot; 3D Animation</p>
-      <h3 class="card-title">Project Title Here</h3>
-      <p class="card-desc">What the brief was, what you were learning, and what you pushed yourself to figure out.</p>
-      <div class="tags">
-        <span class="tag">3D</span>
-        <span class="tag">Character</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="embed-wrap">
-      <div class="embed-placeholder">
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-          <circle cx="20" cy="20" r="18" stroke="white" stroke-width="1.5"/>
-          <polygon points="16,13 30,20 16,27" fill="white"/>
-        </svg>
-        <span>Add embed URL</span>
-      </div>
-    </div>
-    <div class="card-body">
-      <p class="card-meta">2022 &middot; Brand Identity</p>
-      <h3 class="card-title">Project Title Here</h3>
-      <p class="card-desc">What the brief was, what you were learning, and what you pushed yourself to figure out.</p>
-      <div class="tags">
-        <span class="tag">After Effects</span>
-        <span class="tag">Illustrator</span>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-  </section>
-
-  <!-- SECTION: PERSONAL / EXPERIMENTS -->
-
-  <section class="section">
-    <div class="section-header">
-      <h2>Experiments</h2>
-      <span class="section-tag">Personal</span>
-    </div>
-
-
-<div class="grid">
-
-  <div class="card">
-    <div class="embed-wrap">
-      <iframe title="vimeo-player" src="https://player.vimeo.com/video/300673583?h=afe2ecb8d6" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
-    </div>
-    <div class="card-body">
-      <p class="card-meta">2018 &middot; Personal Project</p>
-      <h3 class="card-title">Waves of Hexagons</h3>
-      <p class="card-desc">Exploring Maya's motion design features.</p>
-      <div class="tags">
-        <span class="tag">Maya</span>
-        <span class="tag">Exploration</span>
-      </div>
-    </div>
-  </div>
-
-<div class="card">
-    <div class="embed-wrap">
-      <iframe title="vimeo-player" 
-      src="https://player.vimeo.com/video/304069404?h=84b77045c0" 
-      frameborder="0" referrerpolicy="strict-origin-when-cross-origin" 
-      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen>
-    </iframe>
-    </div>
-    <div class="card-body">
-      <p class="card-meta">2018 &middot; Personal Project</p>
-      <h3 class="card-title">Dancing Bubbles</h3>
-      <p class="card-desc">Exploring Maya's motion design features.</p>
-      <div class="tags">
-        <span class="tag">Maya</span>
-        <span class="tag">Exploration</span>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-    <p>Green Light Studios &mdash; <a href="mailto:alexwalsh@greenlight-animation.com">alexwalsh@greenlight-animation.com</a></p>
-    <p style="margin-top:0.5rem;">
-      <a href="/">Home</a> &nbsp;&middot;&nbsp;
-      <a href="/#services">Services</a> &nbsp;&middot;&nbsp;
-      <a href="https://calendly.com/alexwalsh-greenlight-animation/newclientmeeting">Start a Project</a>
-    </p>
-  </footer>
+  <div class="footer-green"></div>
+</footer>
 
 </body>
 </html>
