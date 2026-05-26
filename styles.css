@@ -215,6 +215,9 @@ section {
 }
 .about-body p strong { color: var(--white); font-weight: 500; }
 .about-body a { color: var(--green); text-decoration: none; }
+.about-body .cta-btn {
+  color: #000;
+}
 .about-creds {
   display: flex;
   flex-direction: column;
