@@ -502,6 +502,7 @@ footer {
   color: var(--muted);
   text-decoration: none;
   transition: color 0.2s;
+  margin-bottom: 20px;
 }
 .back-link:hover { color: var(--green); }
 
