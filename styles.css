@@ -279,7 +279,7 @@ section {
 .portfolio-item:hover .portfolio-overlay { opacity: 1; }
 .overlay-tag { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green); border: 1px solid var(--green); padding: 4px 10px; border-radius: 2px; }
 
-#services { border-top: 1px solid #222; }
+#services { border-top: 1px solid #222; padding-bottom: 0; }
 .services-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #222; margin-top: 8px; }
 .service-card { background: var(--black); padding: 40px 32px; transition: background 0.2s; }
 .service-card:hover { background: var(--dark); }
