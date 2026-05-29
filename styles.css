@@ -306,7 +306,7 @@ section {
 #contact { border-top: none; text-align: center; padding: 20px 48px 80px; }
 .contact-email {
   font-family: var(--font-display);
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: clamp(16px, 2vw, 24px);
   color: var(--white);
   text-decoration: none;
   letter-spacing: 0.05em;
