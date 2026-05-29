@@ -1,6 +1,6 @@
 # Green Light Studios
 
-**Motion graphics for small to medium businesses.**
+**Motion designer specializing in automation and modular asset systems.**
 Northern Colorado — Remote worldwide.
 
 ---
@@ -9,7 +9,7 @@ Northern Colorado — Remote worldwide.
 
 **Motion That Moves People**
 
-Logo animations, product reveals, and motion graphics that make brands impossible to ignore.
+A motion designer who makes brands stop traffic, complex ideas feel simple, and builds systems that last past a single project.
 
 [Book a Call](https://calendly.com/alexwalsh-greenlight-animation/newclientmeeting)
 
@@ -17,63 +17,51 @@ Logo animations, product reveals, and motion graphics that make brands impossibl
 
 ## About
 
-I am Alex, the motion designer behind Green Light Studios. Based in Northern Colorado, working with businesses across the USA and around the world.
+I am Alex, the motion designer behind Green Light Studios. Based in Northern Colorado, working with studios and businesses across the USA and around the world.
 
-I specialize in **brand and logo animations for small to medium businesses**. If your logo sits frozen on a screen while everything else moves, that is the problem I solve.
+Most designers think in stories. I also think in logical systems. That combination lives in every frame I build. Expressions are a native language to me, not a party trick. That means I can build in ways others cannot, automate what others do by hand, and deliver assets that scale past the project they were made for.
 
-Every animation I build is made with purpose. Designed to match your brand, work across all platforms, and make your business look like it belongs.
+Available for studio hire and freelance clients.
 
 **Credentials**
 
 - Bachelor of Fine Arts in 3D Graphics and Animation, University of Colorado Denver
-- Certificate in After Effects, School of Motion
-- Certificate in Programming, Colorado State University Global
+- Certificate in Principles of Animation, School of Motion
+- Certificate in Advanced Expression in After Effects, School of Motion
+- Certificate in Computer Programming, Colorado State University Global
 
 ---
 
 ## Services
 
-### 01 Ready — $200
+### Brand Motion Identity
 
-Your static logo brought to life. Built for social, intros, and brand identity. Delivered in all formats.
+Motion identities built to stop traffic and make brands impossible to ignore across every platform.
 
-**Delivered in 48 hours** | 2 revisions included
+### Explainer and Concept Animation
 
-### 02 Set — $500
+Complex ideas translated into clear, memorable motion that makes audiences stop and watch again.
 
-Full brand identity in motion. Intro, outro, and looping logo, 2 to 3 transitions, and social cards. The essential toolkit for social media campaigns.
+### Modular Motion Systems
 
-**Delivered in 3 to 5 days** | 2 revisions included
-
-### 03 Ignite — $1,000
-
-Specialty short-form motion for Reels and TikTok. Great for product reveals and promotional events. Designed to stop the scroll and hold the eye.
-
-**Delivered in 1 to 3 weeks** | 2 revisions included
-
-**Add-ons**
-
-- Additional revision rounds: $75 per round
-- Logo redraw (simple): $75
-- Logo redraw (complex): $150
-- Source file license: quoted separately
+Automated and modular animation assets built to scale across projects and campaigns.
 
 ---
 
 ## Featured Work
 
-[Watch the Demo Reel on YouTube](https://www.youtube.com/watch?v=zjaFv7AWf7s)
+[Watch the Demo Reel on Vimeo](https://player.vimeo.com/video/1193029844)
 
 ---
 
 ## Testimonials
 
 > "We gave Alex a description of our podcast. He came back with the perfect logo with animations that fit the style and feel we were looking for. Very professional and quick."
-> 
+>
 > **Steve W.** — The Steve and Steve Show
 
 > "Such amazing work! His work is precise and exactly what I was looking for!"
-> 
+>
 > **Alex C.** — School Teacher
 
 ---
