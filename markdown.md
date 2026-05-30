@@ -9,7 +9,7 @@ Northern Colorado — Remote worldwide.
 
 **Motion That Moves People**
 
-A motion designer who makes brands stop traffic, complex ideas feel simple, and builds systems that last past a single project.
+Motion design built to make unstoppable motion identities, turns complex ideas into clear motion, and creates systems that go beyond a single project.
 
 [Book a Call](https://calendly.com/alexwalsh-greenlight-animation/newclientmeeting)
 
