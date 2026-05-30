@@ -36,7 +36,7 @@ Available for studio hire and freelance clients.
 
 ### Brand Motion Identity
 
-Motion identities built to stop traffic and make brands impossible to ignore across every platform.
+Motion identities built to stop the scroll and make brands impossible to ignore across every platform.
 
 ### Explainer and Concept Animation
 
