@@ -152,10 +152,15 @@ display: grid;
 grid-template-columns: 80px 1fr;
 gap: 0;
 transition: background 0.2s;
+border-bottom: 1px solid var(--border);
 }
 .process-step:hover {
 background: var(--dark);
 }
+.process-step:last-child {
+  border-bottom: none;
+}
+
 .step-num {
 padding: 40px 32px;
 border-right: 1px solid var(--border);
